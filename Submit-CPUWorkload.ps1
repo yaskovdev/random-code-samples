@@ -63,8 +63,8 @@ if ($Cleanup) {
     return $jobList
 }
 
-$cpuCount = (Get-WmiObject -class Win32_processor).NumberOfLogicalProcessors
-$threadCount = [math]::floor($cpuCount*($UtilizeCorePercent/100))
+$cpuCount = 16
+$threadCount = 16
 
 Write-Verbose "Utilize Core Percent:  $UtilizeCorePercent"
 Write-Verbose "Logical Core Count:    $cpuCount"
